@@ -1,11 +1,12 @@
-result = ''
+result = 'Seja bem-vindo(a)! ;)'
 loop do
+    puts "=================================="
     puts result
     puts "=================================="
     puts 'Selecione uma das seguintes opções'
-    puts '1 - Descobrir a idade de uma pessoa'
-    puts '0 - Sair'
-    print 'Opção: '
+    puts '  1 - Descobrir a idade de uma pessoa'
+    puts '  9 - Sair'
+    print '     Opção: '
 
     option = gets.chomp.to_i
 
@@ -16,10 +17,13 @@ loop do
         current_year = gets.chomp.to_i
         age = current_year - year_of_birth
         result = "R: Quem nasceu no ano de #{year_of_birth}, tem #{age} anos em #{current_year}"
-    elsif option == 0
-        break if option == 0
+    elsif option == 9
+        break if option == 9
+    elsif option == ""
+        result = 'Opção inválida'
     else
         result = 'Opção inválida'
     end
-    system "cls"
+    system "clear"
 end
+system "clear"
